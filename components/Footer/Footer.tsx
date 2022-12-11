@@ -1,0 +1,40 @@
+import Link from 'next/link'
+import { AiFillInstagram, AiFillTwitterSquare, AiFillLinkedin, AiFillGithub } from 'react-icons/ai'
+
+
+type Props = {}
+
+function Footer({}: Props) {
+  return (
+    <footer className="py-20 bg-app-dark">
+        <div className="app-container text-[#E2E2E2] text-[1.1rem]">
+            <div className="flex items-center justify-between">
+                <h5 className="text-xl">Contact</h5>                
+                <div className="flex flex-col space-y-4">
+                    <h3 className="text-white text-4xl font-semibold tracking-wide underline decoration-2">olasinde.eon@gmail.com</h3>
+                    <div className="flex space-x-2">
+                        <small className='text-red-600'>*</small>
+                        <p>Please send me email only for working purpose</p>
+                    </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                    <Link href='#' className="text-3xl inline-block">
+                        <AiFillInstagram className="text-white" />
+                    </Link>
+                    <Link href='#' className="text-3xl inline-block">
+                        <AiFillLinkedin className="text-white" />
+                    </Link>
+                    <Link href='#' className="text-3xl inline-block">
+                        <AiFillGithub className="text-white" />
+                    </Link>
+                    <Link href='#' className="text-3xl inline-block">
+                        <AiFillTwitterSquare className="text-white" />
+                    </Link>
+                </div>
+            </div>
+        </div>
+    </footer>
+  )
+}
+
+export default Footer

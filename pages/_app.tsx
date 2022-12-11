@@ -1,6 +1,23 @@
 import '../styles/globals.css'
+import { FC, ReactNode, useEffect } from 'react'
 import type { AppProps } from 'next/app'
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+
+const Noop: FC<{ children?: ReactNode }> = ({ children }) => <>{children}</>
+
+
+export default function MyApp({ Component, pageProps }: AppProps) {
+  const Layout = (Component as any).Layout || Noop
+
+  useEffect(() => {
+
+  }, [])
+
+  return (
+    <>
+      <Layout pageProps={pageProps}>
+        <Component {...pageProps} />
+      </Layout>
+    </>
+  )
 }
