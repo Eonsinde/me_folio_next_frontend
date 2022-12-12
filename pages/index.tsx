@@ -27,7 +27,7 @@ export default function Home() {
               {/* header text and captions */}
               <div className="basis-full md:basis-6/12 flex flex-col items-center md:items-start space-y-8 text-[1.1rem]">
                 <p className='font-dm-sans text-[1.25rem] italic tracking-wide'>Hello! I’m Olasinde Jesutise Enoch</p>
-                <h1 className="font-dm-sans font-bold text-[45px] md:text-[58px] lg:text-[64px] before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-app-dark relative">
+                <h1 className="font-dm-sans font-bold text-center md:text-left text-[45px] md:text-[58px] lg:text-[64px] before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-app-dark relative">
                   <span className="relative text-white">Full stack Developer</span>
                 </h1>
                 <div className="flex items-center justify-start space-x-4 text-[1.25rem]">
@@ -115,7 +115,7 @@ export default function Home() {
                                 </Link>
                             </div>
                         </div>
-                        <p className="text-[#6C6C6C]">Non commercial, Community project</p>
+                        <p className="text-[#6C6C6C] text-center md:text-left">Non commercial, Community project</p>
                         <Circle className='absolute' />
                     </div>
                   </div>

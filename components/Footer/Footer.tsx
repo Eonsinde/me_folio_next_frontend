@@ -11,8 +11,8 @@ function Footer({}: Props) {
             <div className="flex flex-col md:flex-row items-center justify-between space-y-10 md:space-y-0">
                 <h4 className="text-xl">Contact</h4>                
                 <div className="flex flex-col items-center md:items-start space-y-4">
-                    <h3 className="text-white text-[30px] md:text-3xl lg:text-4xl font-semibold tracking-wide underline decoration-2">olasinde.eon@gmail.com</h3>
-                    <div className="flex space-x-2">
+                    <h3 className="text-white text-[22px] md:text-3xl lg:text-4xl font-semibold tracking-wide underline decoration-2">olasinde.eon@gmail.com</h3>
+                    <div className="flex space-x-2 text-center md:text-left">
                         <small className='text-red-600'>*</small>
                         <p>Please send me email only for working purpose</p>
                     </div>
