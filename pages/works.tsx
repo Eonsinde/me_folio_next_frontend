@@ -69,7 +69,7 @@ export default function Works({}: Props) {
                                             </Link>
                                         </div>
                                     </div>
-                                    <p className="text-[#6C6C6C]">Non commercial, Community project</p>
+                                    <p className="text-[#6C6C6C] text-center md:text-left">Non commercial, Community project</p>
                                     <Circle className='absolute' />
                                 </div>
                             </div>
