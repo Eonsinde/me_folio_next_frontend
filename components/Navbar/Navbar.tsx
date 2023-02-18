@@ -44,7 +44,7 @@ export default function Navbar({ links }: Props) {
                       link={link}
                       count={index+1}
                       onClick={() => setNavOpen(false)}
-                      className="text-[3.2rem] sm:text-[4rem] uppercase cursor-pointer font-semibold"
+                      className="text-[3.2rem] sm:text-[3.7rem] uppercase cursor-pointer font-semibold"
                     />
                   ))}
                 </motion.div>

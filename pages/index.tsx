@@ -6,9 +6,15 @@ import { FiLink2 } from 'react-icons/fi'
 import Circle from '@components/shapes/Circle'
 import { SiDjango, SiExpress, SiNextdotjs, SiReact } from "react-icons/si"
 import { TbBrandReactNative } from "react-icons/tb"
+import { customSanityFetcher } from "../backend-requests"
+import { urlFor } from 'sanity-connect'
 
 
-export default function Home() {
+type Props = {
+  projects: any
+}
+
+export default function Home({ projects } : Props) {
   const works: number[] = [1, 2, 3, 4, 5, 6];
 
   return (
@@ -94,12 +100,12 @@ export default function Home() {
               </h4>      
               {/* render works */}
               <div className="basis-10/12 flex flex-col space-y-10 ">
-                {works.map(work => (
-                  <div key={work} className="single-work flex flex-col md:even:flex-row md:odd:flex-row-reverse">
+                {projects?.map((work:any) => (
+                  <div key={work._id} className="single-work flex flex-col md:even:flex-row md:odd:flex-row-reverse">
                     <div className="md:basis-4/12 h-[250px] md:h-auto relative">
                       <Image 
                         className="z-0 object-cover"
-                        src="/images/works/work1.jfif"
+                        src={urlFor(work.related_images[0].poster).url()}
                         fill
                         sizes="(max-width: 768px) w-full,
                                 (max-width: 1200px) w-full,
@@ -111,7 +117,7 @@ export default function Home() {
                       <div className="z-[5] flex flex-col items-center justify-center">
                         <div className="">
                           <Link href="/" className="flex items-center space-x-4">
-                            <h3 className="">Instalife Web Application</h3>
+                            <h3 className="capitalize">{work.title}</h3>
                             <FiLink2 className="" />
                           </Link>
                         </div>
@@ -146,6 +152,26 @@ export default function Home() {
       </section>
     </>
   )
+}
+
+export async function getStaticProps() {
+  // Call an external API endpoint to get posts.
+  // You can use any data fetching library
+  const projects:any = await customSanityFetcher(`
+    *[_type == "work"][0...4]{
+      ...,
+    }
+  `)
+
+    console.log("Projects:", projects)
+
+  // By returning { props: { projects } }, the Blog component
+  // will receive `projects` as a prop at build time
+  return {
+    props: {
+      projects
+    },
+  }
 }
 
 Home.Layout = Layout
