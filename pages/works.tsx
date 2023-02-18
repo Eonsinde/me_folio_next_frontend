@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { AnimatePresence, motion } from "framer-motion"
 import Layout from '@components/Layout'
 import Circle from '@components/shapes/Circle'
 import { BsFillGridFill } from 'react-icons/bs'
@@ -46,12 +47,12 @@ export default function Works({}: Props) {
                             <p>List View</p>
                         </button>
                     </div>
-                    <div className="flex flex-col space-y-10 ">
+                    <div className={` ${viewState === "list" ? "flex flex-col space-y-10" : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4"}`}>
                         {works.map(work => (
-                            <div key={work} className="single-work flex flex-col md:even:flex-row md:odd:flex-row-reverse">
-                                <div className="md:basis-4/12 h-[250px] md:h-auto relative">
+                            <div key={work} className={`single-work flex ${viewState === "list" ? "flex-col md:even:flex-row md:odd:flex-row-reverse" : "flex-col"}`}>
+                                <div className={`${viewState === "list" ? "md:basis-4/12 h-[250px] md:h-auto" : "h-[250px]"}  relative`}>
                                     <Image 
-                                        className="z-10 object-cover"
+                                        className="z-0 object-cover"
                                         src="/images/works/work1.jfif"
                                         fill
                                         sizes="(max-width: 768px) w-full,
@@ -60,16 +61,16 @@ export default function Works({}: Props) {
                                         alt="avatar"
                                     />
                                 </div>
-                                <div className="basis-full md:basis-8/12 flex flex-col items-center justify-center space-y-4 bg-app-dark relative overflow-hidden py-8 md:py-16 px-5">
-                                    <div className="z-10">
+                                <div className={`${viewState === "list" ? "basis-full md:basis-8/12" : ""} flex flex-col items-center justify-center bg-app-dark relative overflow-hidden ${viewState === "list" ? "py-8 md:py-16 px-5" : "py-8 px-5"}`}>
+                                    <div className="z-[5] flex flex-col items-center justify-center">
                                         <div className="">
                                             <Link href="/" className="flex items-center space-x-4">
                                                 <h3 className="">Instalife Web Application</h3>
                                                 <FiLink2 className="" />
                                             </Link>
                                         </div>
+                                        <p className="text-[#6C6C6C] text-center">Non commercial, Community project</p>
                                     </div>
-                                    <p className="text-[#6C6C6C] text-center md:text-left">Non commercial, Community project</p>
                                     <Circle className='absolute' />
                                 </div>
                             </div>

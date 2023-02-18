@@ -38,7 +38,7 @@ export default function Home() {
               <div className="relative hidden md:flex items-center justify-end">
                 <div className="bg-app-dark rounded-full">
                   <Image 
-                    className="z-10"
+                    className="z-0"
                     src="/images/avatar.png"
                     height={315}
                     width={315}
@@ -72,7 +72,7 @@ export default function Home() {
             </div>
             <div className="basis-5/12 flex items-center justify-start md:justify-end">
               <Image 
-                className="z-10"
+                className="z-0"
                 src="/images/computer_code.jfif"
                 height={400}
                 width={400}
@@ -96,27 +96,27 @@ export default function Home() {
                 {works.map(work => (
                   <div key={work} className="single-work flex flex-col md:even:flex-row md:odd:flex-row-reverse">
                     <div className="md:basis-4/12 h-[250px] md:h-auto relative">
-                        <Image 
-                            className="z-10 object-cover"
-                            src="/images/works/work1.jfif"
-                            fill
-                            sizes="(max-width: 768px) w-full,
-                                    (max-width: 1200px) w-full,
-                                    w-full h-full"
-                            alt="avatar"
-                        />
+                      <Image 
+                        className="z-0 object-cover"
+                        src="/images/works/work1.jfif"
+                        fill
+                        sizes="(max-width: 768px) w-full,
+                                (max-width: 1200px) w-full,
+                                w-full h-full"
+                        alt="avatar"
+                      />
                     </div>
-                    <div className="basis-full md:basis-8/12 flex flex-col items-center justify-center space-y-4 bg-app-dark relative overflow-hidden py-8 md:py-16 px-5">
-                        <div className="z-10">
-                            <div className="">
-                                <Link href="/" className="flex items-center space-x-4">
-                                    <h3 className="">Instalife Web Application</h3>
-                                    <FiLink2 className="" />
-                                </Link>
-                            </div>
+                    <div className="basis-full md:basis-8/12 flex flex-col items-center justify-center bg-app-dark relative overflow-hidden py-8 md:py-16 px-5">
+                      <div className="z-[5] flex flex-col items-center justify-center">
+                        <div className="">
+                          <Link href="/" className="flex items-center space-x-4">
+                            <h3 className="">Instalife Web Application</h3>
+                            <FiLink2 className="" />
+                          </Link>
                         </div>
                         <p className="text-[#6C6C6C] text-center md:text-left">Non commercial, Community project</p>
-                        <Circle className='absolute' />
+                      </div>
+                      <Circle className='absolute' />
                     </div>
                   </div>
                 ))}
