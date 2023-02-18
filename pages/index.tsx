@@ -3,9 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Layout from '@components/Layout'
 import { FiLink2 } from 'react-icons/fi'
-import styles from '../styles/Home.module.css'
 import Circle from '@components/shapes/Circle'
-
+import { SiDjango, SiExpress, SiNextdotjs, SiReact } from "react-icons/si"
+import { TbBrandReactNative } from "react-icons/tb"
 
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
               {/* header text and captions */}
               <div className="basis-full md:basis-6/12 flex flex-col items-center md:items-start space-y-8 text-[1.1rem]">
                 <p className='font-dm-sans text-[1.25rem] italic tracking-wide'>Hello! I’m Olasinde Jesutise Enoch</p>
-                <h1 className="font-dm-sans font-bold text-center md:text-left text-[45px] md:text-[58px] lg:text-[64px] before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-app-dark relative">
+                <h1 className="font-dm-sans font-bold text-center md:text-left text-[45px] md:text-[58px] lg:text-[64px] relative before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-app-dark">
                   <span className="relative text-white">Full stack Developer</span>
                 </h1>
                 <div className="flex items-center justify-start space-x-4 text-[1.25rem]">
@@ -69,6 +69,7 @@ export default function Home() {
               <p>Multi-disciplinary full stack developer. I transform problems into scalable solutions, using design and technology</p>
               <p>I work in the fields of frontend, backend and mobile development</p>
               <p>In my spare time I work on computer graphics and develop a 2D game engine with javascript and C++</p>
+              <Link href='/about' className='underline'>Read More</Link>
             </div>
             <div className="basis-5/12 flex items-center justify-start md:justify-end">
               <Image 
@@ -125,6 +126,21 @@ export default function Home() {
             <div className="text-right mt-8">
               <Link href="" className="underline">View all projects</Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className='py-20'>
+        <div className="app-container">
+          <h4 className="font-bold text-xl before:block before:absolute before:top-3 before:-left-2 before:skew-y-3 before:h-[30px] before:w-28 before:bg-app-dark relative">
+            <span className="relative text-white">My Stack</span>
+          </h4>      
+          <div className='mt-10 flex items-center justify-between space-x-4 md:space-x-4 overflow-x-auto scrollbar-hide'>
+            <div className='bg-neutral-600/30 md:hover:bg-neutral-600/70 py-10 min-w-[12rem] w-48 flex flex-col items-center space-y-2 transition-colors'><SiDjango className='text-green-700 text-[5rem]'/><span>Django</span></div>
+            <div className='bg-neutral-600/30 md:hover:bg-neutral-600/70 py-10 min-w-[12rem] w-48 flex flex-col items-center space-y-2 transition-colors'><SiReact className='text-blue-400 text-[5rem]'/><span>React</span></div>
+            <div className='bg-neutral-600/30 md:hover:bg-neutral-600/70 py-10 min-w-[12rem] w-48 flex flex-col items-center space-y-2 transition-colors'><TbBrandReactNative className='text-blue-400 text-[5rem]'/><span>React Native</span></div>
+            <div className='bg-neutral-600/30 md:hover:bg-neutral-600/70 py-10 min-w-[12rem] w-48 flex flex-col items-center space-y-2 transition-colors'><SiNextdotjs className='text-white text-[5rem]'/><span>NextJs</span></div>
+            <div className='bg-neutral-600/30 md:hover:bg-neutral-600/70 py-10 min-w-[12rem] w-48 flex flex-col items-center space-y-2 transition-colors'><SiExpress className='text-green-500 text-[5rem]'/><span>Express</span></div>
           </div>
         </div>
       </section>

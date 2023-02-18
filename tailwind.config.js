@@ -16,5 +16,7 @@ module.exports = {
       'dm-sans': ['Playfair Display', 'sans-serif'],
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
 }

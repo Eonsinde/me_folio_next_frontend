@@ -17,7 +17,7 @@ const NavLink = ({ link, count, className, onClick }: Props) => {
     <Link
       href={`${link.href}`}
       onClick={onClick ? onClick : () => {}}
-      className={`flex flex-col space-y-2 items-end justify-center ${className ? className : ''}`}
+      className={`flex flex-col space-y-2 items-start md:items-end justify-center ${className ? className : ''}`}
     > 
       <small>0{count}</small>
       <p>{link.label}</p>
