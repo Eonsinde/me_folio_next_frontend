@@ -19,7 +19,7 @@ export default function Navbar({ links }: Props) {
         <div className='flex items-center justify-between'>
           <div className='z-20 basis-full md:basis-auto flex items-center justify-between'>
             <Link href="/" className="text-white text-2xl font-bold">Eonsinde</Link>
-            <button onClick={() => setNavOpen(prevState => !prevState)} className={cn(styles.navToggler, navOpen && styles.navOpen)}>
+            <button onClick={() => setNavOpen(prevState => !prevState)} className={cn(styles.navToggler, navOpen && styles.navOpen, "outline-none")}>
             </button>
           </div>
           <div className="hidden md:flex items-center justify-center space-x-10">

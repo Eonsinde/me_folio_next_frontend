@@ -48,7 +48,7 @@ export default function Works({}: Props) {
                     </div>
                     <div className={` ${viewState === "list" ? "flex flex-col space-y-10" : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-10"}`}>
                         {works.map(work => (
-                            <div key={work} className={`single-work flex ${viewState === "list" ? "flex-col md:even:flex-row md:odd:flex-row-reverse" : "flex-col"}`}>
+                            <div key={work} className={`single-work flex ${viewState === "list" ? "flex-col md:even:flex-row md:odd:flex-row-reverse" : "flex-col"} shadow-md`}>
                                 <div className={`${viewState === "list" ? "md:basis-4/12 h-[250px] md:h-auto" : "h-[250px]"}  relative`}>
                                     <Image 
                                         className="z-0 object-cover"

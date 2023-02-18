@@ -101,7 +101,7 @@ export default function Home({ projects } : Props) {
               {/* render works */}
               <div className="basis-10/12 flex flex-col space-y-10 ">
                 {projects?.map((work:any) => (
-                  <div key={work._id} className="single-work flex flex-col md:even:flex-row md:odd:flex-row-reverse">
+                  <div key={work._id} className="single-work flex flex-col md:even:flex-row md:odd:flex-row-reverse shadow-md">
                     <div className="md:basis-4/12 h-[250px] md:h-auto relative">
                       <Image 
                         className="z-0 object-cover"

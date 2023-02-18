@@ -24,7 +24,7 @@ export default function Works({}: Props) {
                 <h1 className="font-dm-sans text-[45px] md:text-[58px] lg:text-[64px]">About</h1>
             </header>
 
-            <section className="py-28 text-[1.1rem]">
+            <section className="py-10 md:py-28 text-[1.1rem]">
                 <div className="app-container">
                     <div className="py-28 flex flex-col md:flex-row item-start justify-between space-y-10 md:space-y-0 space-x-0 md:space-x-4">
                         <div className="basis-5/12 flex items-start justify-start md:justify-end">
