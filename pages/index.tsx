@@ -121,7 +121,7 @@ export default function Home({ projects } : Props) {
                             <FiLink2 className="" />
                           </Link>
                         </div>
-                        <p className="text-[#6C6C6C] text-center md:text-left">Non commercial, Community project</p>
+                        <p className="text-[#6C6C6C] capitalize text-center md:text-left">{project.summary}</p>
                       </div>
                       <Circle className='absolute' />
                     </div>
@@ -161,6 +161,7 @@ export async function getStaticProps() {
     *[_type == "work"][0...4]{
       title,
       slug,
+      summary,
       related_images
     }
   `)

@@ -93,7 +93,7 @@ const WorkDetail = (props: Props) => {
                                 <span>{data[0].website_link}</span>
                             </>
                         </Link>
-                        <p>Project Summary</p>
+                        <p>{data[0].summary}</p>
                         <p className='leading-6 text-neutral-400'>
                             {(data !== undefined) && data[0].briefing[0].children.map((child:any, index:number) => (
                                 <span 

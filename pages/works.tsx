@@ -72,7 +72,7 @@ export default function Works({ projects }: Props) {
                                                 <FiLink2 className="" />
                                             </Link>
                                         </div>
-                                        <p className="text-[#6C6C6C] text-center">Non commercial, Community project</p>
+                                        <p className="text-[#6C6C6C] capitalize text-center">{project.summary}</p>
                                     </div>
                                     <Circle className='absolute' />
                                 </div>
