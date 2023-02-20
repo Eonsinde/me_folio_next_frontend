@@ -18,7 +18,7 @@ export default function Navbar({ links }: Props) {
       <div className="app-container">
         <div className='flex items-center justify-between'>
           <div className='z-20 basis-full md:basis-auto flex items-center justify-between'>
-            <Link href="/" className="text-white text-2xl font-bold">Eonsinde</Link>
+            <Link href="/" className="text-white text-2xl font-bold outline-none">Eonsinde</Link>
             <button onClick={() => setNavOpen(prevState => !prevState)} className={cn(styles.navToggler, navOpen && styles.navOpen, "outline-none")}>
             </button>
           </div>

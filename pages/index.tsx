@@ -38,7 +38,7 @@ export default function Home({ projects } : Props) {
                 </h1>
                 <div className="flex items-center justify-start space-x-4 text-[1.25rem]">
                   <Link href="/" className='block underline'>Show projects</Link>
-                  <Link href="/" className='block underline'>Resume</Link>
+                  <Link href="/me_resume_2023_update.pdf" className='block underline' target="__blank">Resume</Link>
                 </div>
               </div>
               <div className="relative hidden md:flex items-center justify-end">
@@ -68,7 +68,7 @@ export default function Home({ projects } : Props) {
         <div className="app-container">
           <div className="flex flex-col md:flex-row item-start justify-between space-y-10 md:space-y-0">
             {/* <h5 className=" text-xl">About Me</h5>  */}
-            <h4 className="basis-2/12 font-bold text-xl before:block before:absolute before:top-3 before:-left-2 before:skew-y-3 before:h-[30px] before:w-28 before:bg-[#181818] relative">
+            <h4 className="basis-2/12 font-bold text-xl relative before:block before:absolute before:top-3 before:-left-2 before:skew-y-3 before:h-[30px] before:w-28 before:bg-[#181818]">
               <span className="relative text-white">About Me</span>
             </h4>               
             <div className="flex flex-col space-y-4 basis-5/12 text-[1.1rem]">
@@ -100,12 +100,12 @@ export default function Home({ projects } : Props) {
               </h4>      
               {/* render works */}
               <div className="basis-10/12 flex flex-col space-y-10 ">
-                {projects?.map((work:any) => (
-                  <div key={work._id} className="single-work flex flex-col md:even:flex-row md:odd:flex-row-reverse shadow-md">
+                {projects?.map((project:any) => (
+                  <div key={project._id} className="single-work flex flex-col md:even:flex-row md:odd:flex-row-reverse shadow-md">
                     <div className="md:basis-4/12 h-[250px] md:h-auto relative">
                       <Image 
                         className="z-0 object-cover"
-                        src={urlFor(work.related_images[0].poster).url()}
+                        src={urlFor(project.related_images[0].poster).url()}
                         fill
                         sizes="(max-width: 768px) w-full,
                                 (max-width: 1200px) w-full,
@@ -116,8 +116,8 @@ export default function Home({ projects } : Props) {
                     <div className="basis-full md:basis-8/12 flex flex-col items-center justify-center bg-app-dark relative overflow-hidden py-8 md:py-16 px-5">
                       <div className="z-[5] flex flex-col items-center justify-center">
                         <div className="">
-                          <Link href="/" className="flex items-center space-x-4">
-                            <h3 className="capitalize">{work.title}</h3>
+                          <Link href={`/work/${project.slug.current}`} className="flex items-center space-x-4">
+                            <h3 className="capitalize">{project.title}</h3>
                             <FiLink2 className="" />
                           </Link>
                         </div>
@@ -130,7 +130,7 @@ export default function Home({ projects } : Props) {
               </div>
             </div>
             <div className="text-right mt-8">
-              <Link href="" className="underline">View all projects</Link>
+              <Link href="/works" className="underline">View all projects</Link>
             </div>
           </div>
         </div>
@@ -159,11 +159,11 @@ export async function getStaticProps() {
   // You can use any data fetching library
   const projects:any = await customSanityFetcher(`
     *[_type == "work"][0...4]{
-      ...,
+      title,
+      slug,
+      related_images
     }
   `)
-
-    console.log("Projects:", projects)
 
   // By returning { props: { projects } }, the Blog component
   // will receive `projects` as a prop at build time
