@@ -39,8 +39,24 @@ export default function Works({}: Props) {
                         <div className="basis-6/12 flex flex-col space-y-4 text-[1.1rem]">
                             <h1 className='text-3xl font-bold'>Hello There😎✌️</h1>
                             <p>My name is <span className='capitalize font-semibold text-lg'>Olasinde Jesutise Enoch</span> & I am a <span className='capitalize font-semibold text-lg'>full stack developer</span></p>
-                            <p>I have about 4 years+ of experience in web development and a year+ in mobile development</p>
-                            <p>Through the years I have learnt a lot and topped my development game with the following frameworks</p>
+                            <div>
+                                <p>
+                                    As a web developer with five years of experience, I have had the opportunity to work on a wide range of projects and collaborate with diverse teams. 
+                                    Over the years, I have gained a deep understanding of web development principles and the latest industry trends, and have honed my skills in coding, testing, and debugging.
+                                </p>
+                                <br />
+                                <p>
+                                    In my first year as a web developer, I focused on learning the basics of HTML, CSS, and JavaScript. 
+                                    I also gained experience in using various frameworks such as Bootstrap and Materialize to create responsive web designs.
+                                </p>
+                                <br />
+                                <p>
+                                    Going forward year, I began to specialize in the JavaScript frameworks such as React and NextJs.
+                                    I became proficient in creating single-page applications (SPAs) using this react, and gained expertise in building reusable components, 
+                                    integrating with APIs, and managing state with Redux and Recoil. 
+                                    I also started to learn server-side programming using Django and Express, and gained experience in building RESTful APIs.
+                                </p>
+                            </div>
                             <div className='py-5 grid grid-cols-2 sm:grid-cols-3 gap-3 md:flex md:space-x-4'>
                                 <div className='bg-neutral-600/30 p-3 flex flex-col justify-center items-center space-y-2 text-center'><SiDjango className='text-green-300 text-3xl'/><span>Django</span></div>
                                 <div className='bg-neutral-600/30 p-3 flex flex-col justify-center items-center space-y-2 text-center'><SiReact className='text-blue-400 text-3xl'/><span>React</span></div>
@@ -48,6 +64,11 @@ export default function Works({}: Props) {
                                 <div className='bg-neutral-600/30 p-3 flex flex-col justify-center items-center space-y-2 text-center'><SiNextdotjs className='text-white text-3xl'/><span>NextJs</span></div>
                                 <div className='bg-neutral-600/30 p-3 flex flex-col justify-center items-center space-y-2 text-center'><SiExpress className='text-green-500 text-3xl'/><span>Express</span></div>
                             </div>
+                            <p>
+                                Throughout the years spent as a web developer, I have learned that the field is constantly evolving, and that there is always something new to learn.
+                                I have also come to appreciate the importance of teamwork, communication, and continuous learning, and have developed a 
+                                strong work ethic and a passion for building great software.
+                            </p>
                             <p>I work in the fields of frontend, backend and mobile development</p>
                             <p>In my spare time I work on computer graphics and develop a 2D game engine with javascript and C++</p>
                         </div>

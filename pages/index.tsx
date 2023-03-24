@@ -37,7 +37,7 @@ export default function Home({ projects } : Props) {
                   <span className="relative text-white">Full stack Developer</span>
                 </h1>
                 <div className="flex items-center justify-start space-x-4 text-[1.25rem]">
-                  <Link href="/" className='block underline'>Show projects</Link>
+                  <Link href="/works" className='block underline'>Show projects</Link>
                   <Link href="/me_resume_2023_update.pdf" className='block underline' target="__blank">Resume</Link>
                 </div>
               </div>

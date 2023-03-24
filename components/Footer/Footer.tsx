@@ -18,16 +18,16 @@ function Footer({}: Props) {
                     </div>
                 </div>
                 <div className="flex items-center space-x-4">
-                    <Link href='https://www.instagram.com/eon.sinde/' className="text-3xl inline-block">
+                    <Link href='https://www.instagram.com/eon.sinde/' className="text-3xl inline-block" target="_blank">
                         <AiFillInstagram className="text-white" />
                     </Link>
-                    <Link href='https://www.linkedin.com/in/jesutise-olasinde-546221181/' className="text-3xl inline-block">
+                    <Link href='https://www.linkedin.com/in/jesutise-olasinde-546221181/' className="text-3xl inline-block" target="_blank">
                         <AiFillLinkedin className="text-white" />
                     </Link>
-                    <Link href='https://github.com/eonsinde' className="text-3xl inline-block">
+                    <Link href='https://github.com/eonsinde' className="text-3xl inline-block" target="_blank">
                         <AiFillGithub className="text-white" />
                     </Link>
-                    <Link href='https://twitter.com/eonsinde' className="text-3xl inline-block">
+                    <Link href='https://twitter.com/eonsinde' className="text-3xl inline-block" target="_blank">
                         <AiFillTwitterSquare className="text-white" />
                     </Link>
                 </div>
