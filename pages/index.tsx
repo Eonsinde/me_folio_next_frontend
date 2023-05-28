@@ -155,8 +155,6 @@ export default function Home({ projects } : Props) {
 }
 
 export async function getStaticProps() {
-  // Call an external API endpoint to get posts.
-  // You can use any data fetching library
   const projects:any = await customSanityFetcher(`
     *[_type == "work"][0...4]{
       title,
